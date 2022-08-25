@@ -9,9 +9,15 @@ const getImages = async () =>{
         books.map(book => {
             let container = document.querySelectorAll(".row")[0]
             let newElem = document.createElement("div")
-            let img = document.createElement('img')
-            img.setAttribute('src', book.img)
+            // let img = document.createElement('img')
+            // img.setAttribute('src', book.img)
             // newElem.className = "col-md-4 "
+            img.innerHTML=`<div class="card">
+                           <img src=${books.img} class="card-img-top" alt="${books.title}">
+                         <div class="card-body">
+                          <p class="card-text">${books.category}.</p>
+                          </div>
+                          </div>`
             newElem.appendChild(img)
             
     
